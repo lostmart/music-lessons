@@ -1,16 +1,188 @@
 "use client" // Mark this as a Client Component
-import { Container } from "@mui/material"
+import { Box, Container, Typography, Grid, Card, CardContent } from "@mui/material"
 import Button from "@mui/material/Button"
+import ContactForm from "./components/ContactForm"
 
 export default function Home() {
 	return (
 		<div>
 			<main>
 				<Container>
-					<h1 className="">Hello now</h1>
-					<Button variant="contained" color="primary">
-						Nunca temas a la noche
-					</Button>
+					<Container maxWidth="lg">
+						{/* HERO SECTION */}
+						<Box
+							textAlign="center"
+							py={6}
+							sx={{ backgroundColor: "#f5f5f5", borderRadius: 2 }}
+						>
+							<Typography variant="h3" fontWeight="bold">
+								Apprenez la Musique Facilement 🎵
+							</Typography>
+							<Typography variant="h6" color="textSecondary">
+								Des cours personnalisés de piano, guitare et chant pour enfants
+								et adultes.
+							</Typography>
+							<Button
+								variant="contained"
+								color="primary"
+								href="#contact"
+								sx={{ mt: 2 }}
+							>
+								Réservez un cours gratuit
+							</Button>
+						</Box>
+
+						{/* BENEFITS SECTION */}
+						<Box my={6}>
+							<Typography variant="h4" textAlign="center">
+								Pourquoi choisir nos cours ?
+							</Typography>
+							<Grid container spacing={3} mt={2}>
+								{[
+									{
+										title: "🎸 Apprentissage ludique",
+										desc: "Une méthode adaptée aux débutants et avancés pour un progrès rapide.",
+									},
+									{
+										title: "📍 À domicile ou en ligne",
+										desc: "Flexibilité totale pour apprendre où vous voulez.",
+									},
+									{
+										title: "👨‍🎓 Enseignement personnalisé",
+										desc: "Chaque élève reçoit un programme adapté à son niveau et à ses objectifs.",
+									},
+								].map((benefit, index) => (
+									<Grid item xs={12} md={4} key={index}>
+										<Card sx={{ minHeight: "100%" }}>
+											<CardContent>
+												<Typography variant="h6" fontWeight="bold">
+													{benefit.title}
+												</Typography>
+												<Typography variant="body1">{benefit.desc}</Typography>
+											</CardContent>
+										</Card>
+									</Grid>
+								))}
+							</Grid>
+						</Box>
+
+						{/* TESTIMONIALS SECTION */}
+						<Box my={6} textAlign="center">
+							<Typography variant="h4">Ce que disent nos élèves</Typography>
+							<Grid container spacing={3} mt={2}>
+								{[
+									{
+										quote:
+											"Mon fils adore ses cours de piano ! Il progresse rapidement et s’amuse beaucoup.",
+										author: "Sophie, maman de Lucas (9 ans)",
+									},
+									{
+										quote:
+											"Grâce aux cours de guitare, j’ai enfin réalisé mon rêve de jouer mes chansons préférées !",
+										author: "Antoine, 34 ans",
+									},
+								].map((testimonial, index) => (
+									<Grid item xs={12} md={6} key={index}>
+										<Card>
+											<CardContent>
+												<Typography variant="body1" fontStyle="italic">
+													“{testimonial.quote}”
+												</Typography>
+												<Typography
+													variant="caption"
+													display="block"
+													mt={1}
+													color="textSecondary"
+												>
+													- {testimonial.author}
+												</Typography>
+											</CardContent>
+										</Card>
+									</Grid>
+								))}
+							</Grid>
+						</Box>
+
+						{/* CALL TO ACTION SECTION */}
+						<Box
+							textAlign="center"
+							my={6}
+							py={4}
+							sx={{ backgroundColor: "#e3f2fd", borderRadius: 2 }}
+						>
+							<Typography variant="h4">
+								Prêt à commencer votre voyage musical ?
+							</Typography>
+							<Typography variant="h6" color="textSecondary">
+								Réservez votre premier cours gratuit dès maintenant !
+							</Typography>
+							<Button
+								variant="contained"
+								color="secondary"
+								href="#contact"
+								sx={{ mt: 2 }}
+							>
+								Je veux apprendre la musique
+							</Button>
+						</Box>
+
+						{/* FAQ SECTION */}
+						<Box my={6}>
+							<Typography variant="h4" textAlign="center">
+								Questions Fréquentes
+							</Typography>
+							{[
+								{
+									question: "Quel âge faut-il avoir pour commencer ?",
+									answer:
+										"Les cours sont ouverts aux enfants dès [âge minimum] ans ainsi qu’aux adultes.",
+								},
+								{
+									question: "Quels instruments sont disponibles ?",
+									answer:
+										"Nous proposons des cours de piano, guitare et chant, mais d’autres instruments sont possibles sur demande.",
+								},
+								{
+									question: "Comment réserver un cours ?",
+									answer:
+										"Vous pouvez nous contacter via le formulaire ci-dessous ou par téléphone.",
+								},
+							].map((faq, index) => (
+								<Box key={index} mt={3}>
+									<Typography variant="h6" fontWeight="bold">
+										{faq.question}
+									</Typography>
+									<Typography variant="body1">{faq.answer}</Typography>
+								</Box>
+							))}
+						</Box>
+
+						{/* CONTACT SECTION */}
+						<Box id="contact" my={6}>
+							<Typography variant="h4" textAlign="center">
+								Contactez-nous
+							</Typography>
+							<ContactForm />
+						</Box>
+
+						{/* FOOTER */}
+						<Box
+							textAlign="center"
+							py={4}
+							sx={{
+								backgroundColor: "#212121",
+								color: "#fff",
+								borderRadius: 2,
+							}}
+						>
+							<Typography variant="body2">
+								&copy; 2025 École de Musique - Tous droits réservés
+							</Typography>
+							<Typography variant="body2">
+								📞 [Votre téléphone] | 📧 [Votre email]
+							</Typography>
+						</Box>
+					</Container>
 				</Container>
 			</main>
 			<footer>this is the footer !!!</footer>

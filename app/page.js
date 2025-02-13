@@ -34,8 +34,8 @@ export default function Home() {
 							color="textSecondary"
 							sx={{ fontFamily: "Comic Neue, cursive", fontWeight: "bold" }}
 						>
-							Des cours personnalisés de piano, guitare et chant pour enfants et
-							adultes.
+							Cours personnalisés de piano, de guitare et de batterie pour
+							enfants et adultes à Bouafle.
 						</Typography>
 						<Button variant="contained" color="primary" sx={{ mt: 2 }}>
 							<Link
@@ -171,12 +171,12 @@ export default function Home() {
 							{
 								question: "Quels instruments sont disponibles ?",
 								answer:
-									"Nous proposons des cours de piano, guitare et chant, mais d’autres instruments sont possibles sur demande.",
+									"Nous proposons des cours de piano, guitare et batterie, mais d’autres instruments sont possibles sur demande.",
 							},
 							{
 								question: "Comment réserver un cours ?",
 								answer:
-									"Vous pouvez nous contacter via le formulaire ci-dessous ou par téléphone.",
+									"Réservations selon disponibilités. N’hésitez pas à me contacter par téléphone: Martin.",
 							},
 						].map((faq, index) => (
 							<Box key={index} mt={3}>
@@ -226,7 +226,7 @@ export default function Home() {
 						&copy; 2025 École de Musique - Tous droits réservés
 					</Typography>
 					<Typography variant="body2">
-						📞 07 61 72 69 88 | 📧 martinpedraza1979@gmail.com
+						📞 07 61 72 69 88 | 📧 musicmartin78@gmail.com
 					</Typography>
 				</Box>
 			</footer>

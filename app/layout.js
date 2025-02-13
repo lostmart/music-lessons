@@ -1,4 +1,5 @@
 import Providers from "./providers"
+import DrawerAppBar from "./components/DrawerAppBar"
 
 export default function RootLayout({ children }) {
 	return (
@@ -12,7 +13,7 @@ export default function RootLayout({ children }) {
 				/>
 				<meta
 					name="keywords"
-					content="école de musique, cours de piano, cours de guitare, apprendre la musique, chant, Martin Musique, musique à domicile, prof de musique"
+					content="école de musique, cours de piano, cours de guitare, apprendre la musique, chant, Martin Musique, musique à domicile, prof de musique, Martin Pedraza"
 				/>
 				<meta name="author" content="Martin Musique" />
 				<meta name="robots" content="index, follow" />
@@ -48,6 +49,7 @@ export default function RootLayout({ children }) {
 				<link rel="manifest" href="icons/site.webmanifest" />
 			</head>
 			<body>
+				<DrawerAppBar />
 				<Providers>{children}</Providers>
 			</body>
 		</html>

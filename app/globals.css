@@ -11,18 +11,18 @@ body {
 
 
 @keyframes floatAnimation {
-    0% {
-        transform: translateY(0);
-    }
+        0% {
+            transform: translatey(0px);
+        }
 
-    50% {
-        transform: translateY(-20px);
-    }
+        50% {
+            transform: translatey(-14px) rotate(5deg);
+        }
 
-    100% {
-        transform: translateY(0);
+        100% {
+            transform: translatey(0px);
+        }
     }
-}
 
 .floating {
     animation: floatAnimation 3s cubic-bezier(0.25, 1, 0.5, 1) infinite;

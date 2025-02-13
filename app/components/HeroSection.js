@@ -7,12 +7,24 @@ const HeroSection = () => {
 		<Box
 			textAlign="center"
 			py={6}
-			sx={{ backgroundColor: "#f5f5f5", borderRadius: 2, position: "relative" }}
+			sx={{
+				backgroundColor: "#f5f5f5",
+				borderRadius: "8px",
+				position: "relative",
+				height: "43vh",
+				display: "flex",
+				flexDirection: "column",
+				justifyContent: "center",
+				alignItems: "center",
+			}}
 			id="accueil"
 		>
 			<Box
-				sx={{ position: "absolute", left: "5%", top: "60px" }}
-				className="floatAnimation"
+				sx={{ position: "absolute", left: "5%", top: "110px" }}
+				style={{
+					animation:
+						"floatAnimation .9s cubic-bezier(0.25, 1, 0.5, 1) infinite",
+				}}
 			>
 				<Image
 					// loader={myLoader}
@@ -20,12 +32,21 @@ const HeroSection = () => {
 					alt="Picture of the author"
 					width={30}
 					height={30}
-					/*
-                position: absolute;
-                left: 5%;
-                top: 60px;
-                transform: rotate(18deg);
-                */
+				/>
+			</Box>
+			<Box
+				sx={{ position: "absolute", right: "5%", top: "110px" }}
+				style={{
+					animation:
+						"floatAnimation .9s cubic-bezier(0.25, 1, 0.5, 1) infinite",
+				}}
+			>
+				<Image
+					// loader={myLoader}
+					src="/imgs/note-4.png"
+					alt="Picture of the author"
+					width={30}
+					height={30}
 				/>
 			</Box>
 			<Typography

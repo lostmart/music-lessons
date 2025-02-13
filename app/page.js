@@ -1,9 +1,14 @@
 "use client"
-import { Box, Container, Typography, Card, CardContent } from "@mui/material"
+import {
+	Box,
+	Container,
+	Typography,
+	Card,
+	CardContent,
+	Link,
+} from "@mui/material"
 import Grid from "@mui/material/Grid"
-
 import Button from "@mui/material/Button"
-import ContactForm from "./components/ContactForm"
 
 export default function Home() {
 	return (
@@ -15,27 +20,40 @@ export default function Home() {
 						textAlign="center"
 						py={6}
 						sx={{ backgroundColor: "#f5f5f5", borderRadius: 2 }}
+						id="accueil"
 					>
-						<Typography variant="h3" fontWeight="bold">
-							Apprenez la Musique Facilement 🎵
+						<Typography
+							variant="h3"
+							fontWeight="bold"
+							sx={{ fontFamily: "Barriecito, cursive" }}
+						>
+							Apprenez la Musique Facilement
 						</Typography>
-						<Typography variant="h6" color="textSecondary">
+						<Typography
+							variant="h6"
+							color="textSecondary"
+							sx={{ fontFamily: "Comic Neue, cursive", fontWeight: "bold" }}
+						>
 							Des cours personnalisés de piano, guitare et chant pour enfants et
 							adultes.
 						</Typography>
-						<Button
-							variant="contained"
-							color="primary"
-							href="#contact"
-							sx={{ mt: 2 }}
-						>
-							Réservez un cours gratuit
+						<Button variant="contained" color="primary" sx={{ mt: 2 }}>
+							<Link
+								href="mailto:martinpedraza1979@gmail.com"
+								sx={{ color: "#fff", textDecoration: "none" }}
+							>
+								Réservez un cours gratuit
+							</Link>
 						</Button>
 					</Box>
 
 					{/* BENEFITS SECTION */}
 					<Box my={6}>
-						<Typography variant="h4" textAlign="center">
+						<Typography
+							variant="h4"
+							textAlign="center"
+							sx={{ fontFamily: "Barriecito, cursive" }}
+						>
 							Pourquoi choisir nos cours ?
 						</Typography>
 						<Grid container spacing={3} mt={2}>
@@ -68,8 +86,10 @@ export default function Home() {
 					</Box>
 
 					{/* TESTIMONIALS SECTION */}
-					<Box my={6} textAlign="center">
-						<Typography variant="h4">Ce que disent nos élèves</Typography>
+					<Box component="section" my={6} textAlign="center" id="témoignages">
+						<Typography variant="h4" sx={{ fontFamily: "Barriecito, cursive" }}>
+							Ce que disent nos élèves
+						</Typography>
 						<Grid container spacing={3} mt={2}>
 							{[
 								{
@@ -104,6 +124,12 @@ export default function Home() {
 						</Grid>
 					</Box>
 
+					<Box component="section" id="services" my={6} textAlign="center">
+						<Typography variant="h4" sx={{ fontFamily: "Barriecito, cursive" }}>
+							Services
+						</Typography>
+					</Box>
+
 					{/* CALL TO ACTION SECTION */}
 					<Box
 						textAlign="center"
@@ -119,7 +145,7 @@ export default function Home() {
 						</Typography>
 						<Button
 							variant="contained"
-							color="secondary"
+							color="primary"
 							href="#contact"
 							sx={{ mt: 2 }}
 						>
@@ -129,14 +155,18 @@ export default function Home() {
 
 					{/* FAQ SECTION */}
 					<Box my={6}>
-						<Typography variant="h4" textAlign="center">
+						<Typography
+							variant="h4"
+							sx={{ fontFamily: "Barriecito, cursive" }}
+							textAlign="center"
+						>
 							Questions Fréquentes
 						</Typography>
 						{[
 							{
 								question: "Quel âge faut-il avoir pour commencer ?",
 								answer:
-									"Les cours sont ouverts aux enfants dès [âge minimum] ans ainsi qu’aux adultes.",
+									"Les cours sont ouverts aux enfants dès 9 ans ainsi qu’aux adultes.",
 							},
 							{
 								question: "Quels instruments sont disponibles ?",
@@ -160,32 +190,46 @@ export default function Home() {
 
 					{/* CONTACT SECTION */}
 					<Box id="contact" my={6}>
-						<Typography variant="h4" textAlign="center">
+						<Typography
+							variant="h4"
+							sx={{ fontFamily: "Barriecito, cursive" }}
+							textAlign="center"
+						>
 							Contactez-nous
 						</Typography>
-						<ContactForm />
-					</Box>
-
-					{/* FOOTER */}
-					<Box
-						textAlign="center"
-						py={4}
-						sx={{
-							backgroundColor: "#212121",
-							color: "#fff",
-							borderRadius: 2,
-						}}
-					>
-						<Typography variant="body2">
-							&copy; 2025 École de Musique - Tous droits réservés
-						</Typography>
-						<Typography variant="body2">
-							📞 [Votre téléphone] | 📧 [Votre email]
-						</Typography>
+						<Button
+							variant="contained"
+							color="primary"
+							sx={{ mt: 2, mx: "auto", display: "block" }}
+						>
+							<Link
+								href="mailto:martinpedraza1979@gmail.com"
+								sx={{ color: "#fff", textDecoration: "none" }}
+							>
+								CONTACT
+							</Link>
+						</Button>
 					</Box>
 				</Container>
 			</main>
-			<footer>this is the footer !!!</footer>
+			{/* FOOTER */}
+			<footer>
+				<Box
+					textAlign="center"
+					py={4}
+					sx={{
+						backgroundColor: "#212121",
+						color: "#fff",
+					}}
+				>
+					<Typography variant="body2">
+						&copy; 2025 École de Musique - Tous droits réservés
+					</Typography>
+					<Typography variant="body2">
+						📞 07 61 72 69 88 | 📧 martinpedraza1979@gmail.com
+					</Typography>
+				</Box>
+			</footer>
 		</div>
 	)
 }

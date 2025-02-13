@@ -3,20 +3,15 @@
 import * as React from "react"
 import { ThemeProvider, createTheme } from "@mui/material/styles"
 import CssBaseline from "@mui/material/CssBaseline"
+import "@fontsource/barriecito" // Import the font
 import createCache from "@emotion/cache"
 import { CacheProvider } from "@emotion/react"
+import theme from "./theme"
 
 // Create an Emotion cache
 const cache = createCache({
 	key: "css",
 	prepend: true,
-})
-
-// Create a theme instance
-const theme = createTheme({
-	palette: {
-		mode: "light", // or 'dark'
-	},
 })
 
 export default function Providers({ children }) {

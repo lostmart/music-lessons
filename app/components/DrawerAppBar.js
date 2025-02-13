@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import PropTypes from "prop-types"
 import AppBar from "@mui/material/AppBar"
 import Box from "@mui/material/Box"
 import CssBaseline from "@mui/material/CssBaseline"
@@ -11,15 +10,16 @@ import IconButton from "@mui/material/IconButton"
 import List from "@mui/material/List"
 import ListItem from "@mui/material/ListItem"
 import ListItemButton from "@mui/material/ListItemButton"
-import ListItemText from "@mui/material/ListItemText"
 import MenuIcon from "@mui/icons-material/Menu"
 import Toolbar from "@mui/material/Toolbar"
 import Typography from "@mui/material/Typography"
 import Button from "@mui/material/Button"
 import Image from "next/image"
+import { Link } from "@mui/material"
+import theme from "../theme"
 
 const drawerWidth = 240
-const navItems = ["Home", "About", "Contact"]
+const navItems = ["Accueil", "Témoignages", "Services"]
 
 function DrawerAppBar(props) {
 	const { window } = props
@@ -36,7 +36,7 @@ function DrawerAppBar(props) {
 			role="presentation"
 			aria-labelledby="drawer-title"
 		>
-			<Box>
+			<Box sx={{ pt: 2 }}>
 				<Image
 					src="/icons/android-chrome-192x192.png"
 					alt="logo Martin Music"
@@ -49,11 +49,24 @@ function DrawerAppBar(props) {
 				{navItems.map((item) => (
 					<ListItem key={item} disablePadding>
 						<ListItemButton sx={{ textAlign: "center" }} tabIndex={0}>
-							<ListItemText primary={item} />
+							<a
+								href={`#${item.toLowerCase()}`}
+								style={{ color: "#000", textDecoration: "none" }}
+							>
+								{item}
+							</a>
+
+							{/* <ListItemText primary={item} /> */}
 						</ListItemButton>
 					</ListItem>
 				))}
 			</List>
+			<Link
+				href="mailto:martinpedraza1979@gmail.com"
+				sx={{ color: "#000", textDecoration: "none" }}
+			>
+				CONTACT
+			</Link>
 		</Box>
 	)
 
@@ -64,7 +77,7 @@ function DrawerAppBar(props) {
 		<Box sx={{ display: "flex" }}>
 			<CssBaseline />
 			<AppBar component="nav">
-				<Toolbar>
+				<Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
 					<IconButton
 						color="inherit"
 						aria-label="open drawer"
@@ -76,7 +89,13 @@ function DrawerAppBar(props) {
 					>
 						<MenuIcon />
 					</IconButton>
-					<Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
+					<Box
+						sx={{
+							flexGrow: 1,
+							display: { xs: "none", sm: "block" },
+							maxWidth: "32px",
+						}}
+					>
 						<Image
 							src="/icons/android-chrome-192x192.png"
 							alt="logo Martin Music"
@@ -87,9 +106,22 @@ function DrawerAppBar(props) {
 					<Box sx={{ display: { xs: "none", sm: "block" } }}>
 						{navItems.map((item) => (
 							<Button key={item} sx={{ color: "#fff" }} tabIndex={0}>
-								{item}
+								<a
+									href={`#${item.toLowerCase()}`}
+									style={{ color: "#fff", textDecoration: "none" }}
+								>
+									{item}
+								</a>
 							</Button>
 						))}
+					</Box>
+					<Box>
+						<Link
+							href="mailto:martinpedraza1979@gmail.com"
+							sx={{ color: "#fff", textDecoration: "none" }}
+						>
+							CONTACT
+						</Link>
 					</Box>
 				</Toolbar>
 			</AppBar>

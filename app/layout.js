@@ -1,5 +1,6 @@
 import Providers from "./providers"
 import DrawerAppBar from "./components/DrawerAppBar"
+import "./globals.css"
 
 export default function RootLayout({ children }) {
 	return (
@@ -9,11 +10,11 @@ export default function RootLayout({ children }) {
 				<title>Martin Musique - Apprenez & Jouez 🎵</title>
 				<meta
 					name="description"
-					content="Découvrez Martin Musique - Apprenez & Jouez ! Cours de musique personnalisés pour enfants et adultes : piano, guitare, chant et bien plus encore. Apprenez avec plaisir !"
+					content="Découvrez Martin Musique - Apprenez & Jouez ! Cours de musique personnalisés pour enfants et adultes à Bouafle : piano, guitare, batterie et bien plus encore. Apprenez avec plaisir !"
 				/>
 				<meta
 					name="keywords"
-					content="école de musique, cours de piano, cours de guitare, apprendre la musique, chant, Martin Musique, musique à domicile, prof de musique, Martin Pedraza"
+					content="école de musique à Bouafle, cours de piano, cours de guitare, apprendre la musique, batterie, Martin Musique, musique à domicile, prof de musique, Martin Pedraza"
 				/>
 				<meta name="author" content="Martin Musique" />
 				<meta name="robots" content="index, follow" />
@@ -25,7 +26,7 @@ export default function RootLayout({ children }) {
 				/>
 				<meta
 					property="og:description"
-					content="Des cours de musique sur mesure pour tous les âges. Venez apprendre avec Martin Musique !"
+					content="Des cours de musique sur mesure pour tous les âges à Bouafle. Venez apprendre avec Martin Musique !"
 				/>
 				<meta property="og:image" content="/icons/music-mart.webp" />
 				<meta property="og:url" content="https://musicmartin.site" />
@@ -39,7 +40,7 @@ export default function RootLayout({ children }) {
 				/>
 				<meta
 					name="twitter:description"
-					content="Apprenez la musique facilement avec Martin Musique ! Cours de piano, guitare, chant et plus encore."
+					content="Apprenez la musique facilement avec Martin Musique ! Cours de piano, guitare, batterie et plus encore à Bouafle."
 				/>
 				<meta name="twitter:image" content="/icons/music-mart.webp" />
 

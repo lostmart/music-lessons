@@ -8,10 +8,9 @@ const HeroSection = () => {
 			textAlign="center"
 			py={6}
 			sx={{
-				backgroundColor: "#f5f5f5",
 				borderRadius: "8px",
 				position: "relative",
-				height: "43vh",
+				minHeight: "60vh",
 				display: "flex",
 				flexDirection: "column",
 				justifyContent: "center",
@@ -20,7 +19,7 @@ const HeroSection = () => {
 			id="accueil"
 		>
 			<Box
-				sx={{ position: "absolute", left: "5%", top: "110px" }}
+				sx={{ position: "absolute", left: "4%" }}
 				style={{
 					animation:
 						"floatAnimation .9s cubic-bezier(0.25, 1, 0.5, 1) infinite",
@@ -35,7 +34,7 @@ const HeroSection = () => {
 				/>
 			</Box>
 			<Box
-				sx={{ position: "absolute", right: "5%", top: "110px" }}
+				sx={{ position: "absolute", right: "4%" }}
 				style={{
 					animation:
 						"floatAnimation .9s cubic-bezier(0.25, 1, 0.5, 1) infinite",
@@ -47,6 +46,23 @@ const HeroSection = () => {
 					alt="Picture of the author"
 					width={30}
 					height={30}
+				/>
+			</Box>
+			<Box
+				sx={{
+					position: "absolute",
+					zIndex: "0",
+					opacity: "0.7",
+					top: "32%",
+					right: "1%",
+				}}
+			>
+				<Image
+					// loader={myLoader}
+					src="/imgs/boy-guitar.png"
+					alt="Picture of the author"
+					width={230}
+					height={492}
 				/>
 			</Box>
 			<Typography

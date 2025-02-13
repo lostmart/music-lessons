@@ -9,6 +9,7 @@ import {
 } from "@mui/material"
 import Grid from "@mui/material/Grid"
 import Button from "@mui/material/Button"
+import HeroSection from "./components/HeroSection"
 
 export default function Home() {
 	return (
@@ -16,36 +17,7 @@ export default function Home() {
 			<main>
 				<Container maxWidth="lg">
 					{/* HERO SECTION */}
-					<Box
-						textAlign="center"
-						py={6}
-						sx={{ backgroundColor: "#f5f5f5", borderRadius: 2 }}
-						id="accueil"
-					>
-						<Typography
-							variant="h3"
-							fontWeight="bold"
-							sx={{ fontFamily: "Barriecito, cursive" }}
-						>
-							Apprenez la Musique Facilement
-						</Typography>
-						<Typography
-							variant="h6"
-							color="textSecondary"
-							sx={{ fontFamily: "Comic Neue, cursive", fontWeight: "bold" }}
-						>
-							Cours personnalisés de piano, de guitare et de batterie pour
-							enfants et adultes à Bouafle.
-						</Typography>
-						<Button variant="contained" color="primary" sx={{ mt: 2 }}>
-							<Link
-								href="mailto:martinpedraza1979@gmail.com"
-								sx={{ color: "#fff", textDecoration: "none" }}
-							>
-								Réservez un cours gratuit
-							</Link>
-						</Button>
-					</Box>
+					<HeroSection />
 
 					{/* BENEFITS SECTION */}
 					<Box my={6}>
@@ -226,7 +198,7 @@ export default function Home() {
 						&copy; 2025 École de Musique - Tous droits réservés
 					</Typography>
 					<Typography variant="body2">
-						📞 07 61 72 69 88 | 📧 musicmartin78@gmail.com
+						📞 07 61 72 69 88 | 📧 musicmartin78@gmail.com | 
 					</Typography>
 				</Box>
 			</footer>

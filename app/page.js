@@ -10,52 +10,15 @@ import {
 import Grid from "@mui/material/Grid"
 import Button from "@mui/material/Button"
 import HeroSection from "./components/HeroSection"
+import BenefitsSection from "./components/BenefitsSection"
 
 export default function Home() {
 	return (
 		<div>
 			<main>
+				<HeroSection />
 				<Container maxWidth="lg">
-					{/* HERO SECTION */}
-					<HeroSection />
-
-					{/* BENEFITS SECTION */}
-					<Box my={6}>
-						<Typography
-							variant="h4"
-							textAlign="center"
-							sx={{ fontFamily: "Barriecito, cursive" }}
-						>
-							Pourquoi choisir nos cours ?
-						</Typography>
-						<Grid container spacing={3} mt={2}>
-							{[
-								{
-									title: "🎸 Apprentissage ludique",
-									desc: "Une méthode adaptée aux débutants et avancés pour un progrès rapide.",
-								},
-								{
-									title: "📍 À domicile ou en ligne",
-									desc: "Flexibilité totale pour apprendre où vous voulez.",
-								},
-								{
-									title: "👨‍🎓 Enseignement personnalisé",
-									desc: "Chaque élève reçoit un programme adapté à son niveau et à ses objectifs.",
-								},
-							].map((benefit, index) => (
-								<Grid item xs={12} md={4} key={index}>
-									<Card sx={{ minHeight: "100%" }}>
-										<CardContent>
-											<Typography variant="h6" fontWeight="bold">
-												{benefit.title}
-											</Typography>
-											<Typography variant="body1">{benefit.desc}</Typography>
-										</CardContent>
-									</Card>
-								</Grid>
-							))}
-						</Grid>
-					</Box>
+					<BenefitsSection />
 
 					{/* TESTIMONIALS SECTION */}
 					<Box component="section" my={6} textAlign="center" id="témoignages">
@@ -198,7 +161,7 @@ export default function Home() {
 						&copy; 2025 École de Musique - Tous droits réservés
 					</Typography>
 					<Typography variant="body2">
-						📞 07 61 72 69 88 | 📧 musicmartin78@gmail.com | 
+						📞 07 61 72 69 88 | 📧 musicmartin78@gmail.com |
 					</Typography>
 				</Box>
 			</footer>

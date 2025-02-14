@@ -7,14 +7,16 @@ const HeroSection = () => {
 		<Box
 			textAlign="center"
 			py={6}
+			px={2}
 			sx={{
-				borderRadius: "8px",
 				position: "relative",
 				minHeight: "60vh",
 				display: "flex",
 				flexDirection: "column",
 				justifyContent: "center",
 				alignItems: "center",
+				backgroundColor: "#bbdefb",
+				overflow: "hidden",
 			}}
 			id="accueil"
 		>
@@ -52,9 +54,12 @@ const HeroSection = () => {
 				sx={{
 					position: "absolute",
 					zIndex: "0",
-					opacity: "0.7",
 					top: "32%",
 					right: "1%",
+					display: "none",
+					"@media (min-width: 600px)": {
+						display: "block",
+					},
 				}}
 			>
 				<Image

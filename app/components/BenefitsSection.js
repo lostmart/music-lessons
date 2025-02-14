@@ -9,6 +9,23 @@ const BenefitsSection = () => {
 				sx={{
 					position: "absolute",
 					width: "100vw",
+					top: "-82px",
+					left: "-17px",
+					zIndex: "1",
+				}}
+			>
+				<Image
+					src="/imgs/cloudBack.png"
+					alt="white clouds background"
+					style={{ objectFit: "contain", width: "100%", height: "100%" }}
+					width={375}
+					height={200}
+				/>
+			</Box>
+			<Box
+				sx={{
+					position: "absolute",
+					width: "100vw",
 					top: "-78px",
 					left: "-17px",
 					zIndex: "1",
@@ -16,7 +33,7 @@ const BenefitsSection = () => {
 			>
 				<Image
 					src="/imgs/cloudFront.png"
-					alt="Picture of the author"
+					alt="white clouds"
 					style={{ objectFit: "contain", width: "100%", height: "100%" }}
 					width={375}
 					height={200}

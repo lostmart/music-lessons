@@ -10,13 +10,14 @@ const HeroSection = () => {
 			px={2}
 			sx={{
 				position: "relative",
-				minHeight: "60vh",
+				minHeight: "70vh",
 				display: "flex",
 				flexDirection: "column",
-				justifyContent: "center",
+				justifyContent: "start",
 				alignItems: "center",
 				backgroundColor: "#bbdefb",
 				overflow: "hidden",
+				width: "100%",
 			}}
 			id="accueil"
 		>
@@ -85,7 +86,7 @@ const HeroSection = () => {
 				Cours personnalisés de piano, de guitare et de batterie pour enfants et
 				adultes à Bouafle.
 			</Typography>
-			<Button variant="contained" color="primary" sx={{ mt: 2 }}>
+			<Button variant="contained" color="primary" sx={{ mt: 4, mb: 5 }}>
 				<Link
 					href="mailto:martinpedraza1979@gmail.com"
 					sx={{ color: "#fff", textDecoration: "none" }}
@@ -93,6 +94,53 @@ const HeroSection = () => {
 					Réservez un cours gratuit
 				</Link>
 			</Button>
+
+			<Box
+				sx={{
+					position: "absolute",
+					width: "100vw",
+					bottom: "-38px",
+					left: "-8px",
+					zIndex: "1",
+				}}
+			>
+				<Image
+					src="/imgs/cloudBack.png"
+					alt="white clouds background"
+					style={{
+						objectFit: "contain",
+						width: "100%",
+						height: "auto",
+						minWidth: "700px",
+					}}
+					width={380}
+					height={42.34}
+				/>
+			</Box>
+
+			<Box
+				sx={{
+					position: "absolute",
+					width: "100vw",
+					bottom: "-70px",
+					left: "-8px",
+					zIndex: "1",
+				}}
+			>
+				<Image
+					src="/imgs/cloudFront.png"
+					alt="white clouds"
+					style={{
+						objectFit: "contain",
+						width: "100%",
+						height: "auto",
+						minWidth: "490px",
+					}}
+					width={380}
+					height={82.79}
+					sizes="(max-width: 490px) 100vw, 490px"
+				/>
+			</Box>
 		</Box>
 	)
 }

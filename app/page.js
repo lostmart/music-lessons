@@ -12,6 +12,9 @@ import Button from "@mui/material/Button"
 import HeroSection from "./components/HeroSection"
 import BenefitsSection from "./components/BenefitsSection"
 
+import googleReviewsImg from "../public/imgs/google-reviews.png"
+import Image from "next/image"
+
 export default function Home() {
 	return (
 		<div>
@@ -56,6 +59,31 @@ export default function Home() {
 									</Card>
 								</Grid>
 							))}
+						</Grid>
+						<Grid spacing={3} mt={2}>
+							<Card sx={{ maxWidth: 300 }}>
+								<CardContent sx={{ display: "flex", flexDirection: "column" }}>
+									<a
+										href="https://g.page/r/CVNLB3lsby3wEAE/review"
+										target="_blank"
+										style={{ color: "#1976d2", textDecoration: "none" }}
+									>
+										<Image src={googleReviewsImg} alt="Google Reviews" />
+									</a>
+									<Typography variant="h6" fontStyle="italic">
+										Review on Google
+									</Typography>
+									<Button>
+										<a
+											href="https://g.page/r/CVNLB3lsby3wEAE/review"
+											target="_blank"
+											style={{ color: "#1976d2", textDecoration: "none" }}
+										>
+											Read more
+										</a>
+									</Button>
+								</CardContent>
+							</Card>
 						</Grid>
 					</Box>
 

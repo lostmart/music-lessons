@@ -1,6 +1,8 @@
 import { Box, Button, Link, Typography } from "@mui/material"
 import React from "react"
 import Image from "next/image"
+import cloudBack from "../../public/imgs/cloudBack.png"
+import cloudFront from "../../public/imgs/cloudFront.png"
 
 const HeroSection = () => {
 	return (
@@ -105,7 +107,7 @@ const HeroSection = () => {
 				}}
 			>
 				<Image
-					src="/imgs/cloudBack.png"
+					src={cloudBack}
 					alt="white clouds background"
 					style={{
 						objectFit: "contain",
@@ -115,6 +117,7 @@ const HeroSection = () => {
 					}}
 					width={380}
 					height={42.34}
+					sizes="(max-width: 490px) 100vw, 1440px"
 				/>
 			</Box>
 
@@ -128,7 +131,7 @@ const HeroSection = () => {
 				}}
 			>
 				<Image
-					src="/imgs/cloudFront.png"
+					src={cloudFront}
 					alt="white clouds"
 					style={{
 						objectFit: "contain",
@@ -138,7 +141,7 @@ const HeroSection = () => {
 					}}
 					width={380}
 					height={82.79}
-					sizes="(max-width: 490px) 100vw, 490px"
+					sizes="(max-width: 490px) 100vw, 1440px"
 				/>
 			</Box>
 		</Box>

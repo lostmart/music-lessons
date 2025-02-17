@@ -12,8 +12,8 @@ import Button from "@mui/material/Button"
 import HeroSection from "./components/HeroSection"
 import BenefitsSection from "./components/BenefitsSection"
 
-import googleReviewsImg from "../public/imgs/google-reviews.png"
-import Image from "next/image"
+import Testimonials from "./components/Testimonials"
+import FooterComp from "./components/FooterComp"
 
 export default function Home() {
 	return (
@@ -22,70 +22,7 @@ export default function Home() {
 				<HeroSection />
 				<Container maxWidth="lg">
 					<BenefitsSection />
-
-					{/* TESTIMONIALS SECTION */}
-					<Box component="section" my={6} textAlign="center" id="témoignages">
-						<Typography variant="h4" sx={{ fontFamily: "Barriecito, cursive" }}>
-							Ce que disent nos élèves
-						</Typography>
-						<Grid container spacing={3} mt={2}>
-							{[
-								{
-									quote:
-										"Mon fils adore ses cours de piano ! Il progresse rapidement et s’amuse beaucoup.",
-									author: "Sophie, maman de Lucas (9 ans)",
-								},
-								{
-									quote:
-										"Grâce aux cours de guitare, j’ai enfin réalisé mon rêve de jouer mes chansons préférées !",
-									author: "Antoine, 34 ans",
-								},
-							].map((testimonial, index) => (
-								<Grid item xs={12} md={6} key={index}>
-									<Card>
-										<CardContent>
-											<Typography variant="body1" fontStyle="italic">
-												“{testimonial.quote}”
-											</Typography>
-											<Typography
-												variant="caption"
-												display="block"
-												mt={1}
-												color="textSecondary"
-											>
-												- {testimonial.author}
-											</Typography>
-										</CardContent>
-									</Card>
-								</Grid>
-							))}
-						</Grid>
-						<Grid spacing={3} mt={2}>
-							<Card sx={{ maxWidth: 300 }}>
-								<CardContent sx={{ display: "flex", flexDirection: "column" }}>
-									<a
-										href="https://g.page/r/CVNLB3lsby3wEAE/review"
-										target="_blank"
-										style={{ color: "#1976d2", textDecoration: "none" }}
-									>
-										<Image src={googleReviewsImg} alt="Google Reviews" />
-									</a>
-									<Typography variant="h6" fontStyle="italic">
-										Review on Google
-									</Typography>
-									<Button>
-										<a
-											href="https://g.page/r/CVNLB3lsby3wEAE/review"
-											target="_blank"
-											style={{ color: "#1976d2", textDecoration: "none" }}
-										>
-											Read more
-										</a>
-									</Button>
-								</CardContent>
-							</Card>
-						</Grid>
-					</Box>
+					<Testimonials />
 
 					<Box component="section" id="services" my={6} textAlign="center">
 						<Typography variant="h4" sx={{ fontFamily: "Barriecito, cursive" }}>
@@ -175,24 +112,7 @@ export default function Home() {
 					</Box>
 				</Container>
 			</main>
-			{/* FOOTER */}
-			<footer>
-				<Box
-					textAlign="center"
-					py={4}
-					sx={{
-						backgroundColor: "#212121",
-						color: "#fff",
-					}}
-				>
-					<Typography variant="body2">
-						&copy; 2025 École de Musique - Tous droits réservés
-					</Typography>
-					<Typography variant="body2">
-						📞 07 61 72 69 88 | 📧 musicmartin78@gmail.com |
-					</Typography>
-				</Box>
-			</footer>
+			<FooterComp />
 		</div>
 	)
 }

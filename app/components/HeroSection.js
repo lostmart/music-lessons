@@ -114,22 +114,15 @@ const HeroSection = () => {
 						width: "100%",
 						height: "auto",
 						minWidth: "700px",
+						color: "transparent",
+						position: "absolute",
+						top: "-6px",
+						zIndex: "-1",
 					}}
 					width={380}
 					height={42.34}
 					sizes="(max-width: 490px) 100vw, 1440px"
 				/>
-			</Box>
-
-			<Box
-				sx={{
-					position: "absolute",
-					width: "100vw",
-					bottom: "-70px",
-					left: "-8px",
-					zIndex: "1",
-				}}
-			>
 				<Image
 					src={cloudFront}
 					alt="white clouds"
@@ -144,6 +137,18 @@ const HeroSection = () => {
 					sizes="(max-width: 490px) 100vw, 1440px"
 				/>
 			</Box>
+
+			{/* <Box
+				sx={{
+					position: "absolute",
+					width: "100vw",
+					bottom: "-70px",
+					left: "-8px",
+					zIndex: "1",
+				}}
+			>
+				
+			</Box> */}
 		</Box>
 	)
 }

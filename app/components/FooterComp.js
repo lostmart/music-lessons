@@ -40,7 +40,7 @@ const FooterComp = () => {
 						variant="contained"
 						color="success"
 						startIcon={<WhatsAppIcon />}
-						href="https://wa.me/33617226988"
+						href="https://wa.me/33761726988"
 						target="_blank"
 						rel="noopener noreferrer"
 						sx={{ mt: 2 }}

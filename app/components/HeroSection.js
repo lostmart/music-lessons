@@ -68,8 +68,8 @@ const HeroSection = () => {
 						// loader={myLoader}
 						src="/imgs/note-5.png"
 						alt="Picture of the author"
-						width={30}
-						height={30}
+						width={37}
+						height={37}
 					/>
 				</Box>
 				<Box
@@ -83,8 +83,8 @@ const HeroSection = () => {
 						// loader={myLoader}
 						src="/imgs/note-4.png"
 						alt="Picture of the author"
-						width={30}
-						height={30}
+						width={35}
+						height={35}
 					/>
 				</Box>
 				<Box
@@ -94,7 +94,7 @@ const HeroSection = () => {
 						width: "100%",
 						maxWidth: "1200px",
 						margin: "0 auto",
-						minHeight: "80dvh",
+						minHeight: "83dvh",
 						display: "flex",
 						justifyContent: "center",
 						alignItems: "center",

@@ -6,14 +6,20 @@ import {
 	Card,
 	CardContent,
 	Link,
+	CardMedia,
+	ListItemText,
 } from "@mui/material"
 import Grid from "@mui/material/Grid"
 import Button from "@mui/material/Button"
 import HeroSection from "./components/HeroSection"
 import BenefitsSection from "./components/BenefitsSection"
 
+import List from "@mui/material/List"
+import ListItem from "@mui/material/ListItem"
+
 import Testimonials from "./components/Testimonials"
 import FooterComp from "./components/FooterComp"
+import Image from "next/image"
 
 export default function Home() {
 	return (
@@ -28,6 +34,105 @@ export default function Home() {
 						<Typography variant="h4" sx={{ fontFamily: "Barriecito, cursive" }}>
 							Services
 						</Typography>
+						<Grid container spacing={3} mt={2}>
+							<Grid item xs={12} md={4}>
+								<Card>
+									<CardMedia
+										sx={{ height: 140 }}
+										image="/imgs/ground-lesson.jpg"
+										title="music lesson"
+									/>
+									<CardContent>
+										<Typography variant="h6" fontWeight="bold">
+											Cours en Présentiel
+										</Typography>
+										<List
+											sx={{
+												width: "100%",
+												maxWidth: 360,
+												bgcolor: "background.paper",
+											}}
+										>
+											<ListItem>
+												<ListItemText primary="Cours au sol: apprentissage pratique de votre instrument" />
+											</ListItem>
+											<ListItem>
+												<ListItemText primary="Prise de notes pour suivre votre progression" />
+											</ListItem>
+											<ListItem>
+												<ListItemText primary="Théorie musicale et révision de morceaux" />
+											</ListItem>
+										</List>
+									</CardContent>
+								</Card>
+							</Grid>
+							<Grid item xs={12} md={4}>
+								<Card>
+									<CardMedia
+										sx={{ height: 140 }}
+										image="/imgs/remote-lesson.jpg"
+										title="remote lesson"
+									/>
+									<CardContent>
+										<Typography variant="h6" fontWeight="bold">
+											Suivi Vidéo
+										</Typography>
+										<List
+											sx={{
+												width: "100%",
+												maxWidth: 360,
+												bgcolor: "background.paper",
+											}}
+										>
+											<ListItem>
+												<ListItemText primary="Vidéo récapitulative courte après chaque courst" />
+											</ListItem>
+											<ListItem>
+												<ListItemText primary="Exercices et conseils pour progresser chaque semaine" />
+											</ListItem>
+											<ListItem>
+												<ListItemText primary=" Accès facile pour revoir les points essentiels" />
+											</ListItem>
+										</List>
+									</CardContent>
+								</Card>
+							</Grid>
+							<Grid item xs={12} md={4}>
+								<Card>
+									<CardMedia
+										sx={{ height: 140 }}
+										image="/imgs/group-lesson.jpg"
+										title="band lesson, jam session"
+									/>
+									<CardContent>
+										<Typography variant="h6" fontWeight="bold">
+											Ateliers avec d'autres musiciens
+										</Typography>
+										<List
+											sx={{
+												width: "100%",
+												maxWidth: 360,
+												bgcolor: "background.paper",
+											}}
+										>
+											<ListItem>
+												<ListItemText primary=" Jam session toutes les 2-3 semaines selon le nombre d’élèves" />
+											</ListItem>
+											<ListItem>
+												<ListItemText primary="Mise en pratique collective des morceaux appris" />
+											</ListItem>
+											<ListItem>
+												<ListItemText primary="Développement du jeu en groupe et improvisation" />
+											</ListItem>
+										</List>
+									</CardContent>
+								</Card>
+							</Grid>
+						</Grid>
+						<Typography variant="h6" mt={2}>
+							Un apprentissage complet, du cours individuel à la pratique
+							collective !
+						</Typography>
 					</Box>
 
 					{/* CALL TO ACTION SECTION */}
@@ -35,7 +140,7 @@ export default function Home() {
 						textAlign="center"
 						my={6}
 						py={4}
-						sx={{ backgroundColor: "#e3f2fd", borderRadius: 2 }}
+						sx={{ backgroundColor: "#bbdefb" }}
 					>
 						<Typography variant="h4">
 							Prêt à commencer votre voyage musical ?
@@ -89,7 +194,11 @@ export default function Home() {
 					</Box>
 
 					{/* CONTACT SECTION */}
-					<Box id="contact" my={6}>
+					<Box
+						id="contact"
+						my={6}
+						sx={{ position: "relative", minHeight: "50vh" }}
+					>
 						<Typography
 							variant="h4"
 							sx={{ fontFamily: "Barriecito, cursive" }}
@@ -109,6 +218,24 @@ export default function Home() {
 								CONTACT
 							</Link>
 						</Button>
+						<Box
+							sx={{
+								position: "absolute",
+								left: "-16px",
+								top: "-10%",
+								width: "100%",
+								zIndex: "-1",
+								background: "#e1d9bf",
+							}}
+						>
+							<Image
+								src="/imgs/piano-boy.gif"
+								width={675}
+								height={405}
+								lazy="true"
+								alt="playing the piano"
+							/>
+						</Box>
 					</Box>
 				</Container>
 			</main>
